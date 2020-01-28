@@ -5,8 +5,9 @@
 ```
 Accept-encoding: gzip
 Connection: Keep-Alive
-Host: localhost:55341
-User-agent: okhttp/4.3.1
+Host: localhost
+User-agent: agent
+Date: Tue, 28 Jan 2020 14:15:55 GMT
 ```
 
 ### Request body recorded for playback ():
@@ -25,22 +26,15 @@ Access-Control-Allow-Methods: GET
 Connection: keep-alive
 Pragma: no-cache
 Access-Control-Allow-Headers: X-Requested-With
-Date: Tue, 28 Jan 2020 13:01:52 GMT
 X-Frame-Options: deny
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 Cache-Control: no-cache,no-store
 Secure: true
 Content-Security-Policy: default-src 'self'
-Set-Cookie: TS0137860d=017189f947479847958493bbc94b518366d4039713fdc3c3ea861294726ea7397d77f853b050b5598b0bcab0d39b60a829b0a3111596a7306294f2cabcee924c96c6a94a82cc1e0c319e070027ff97fa7c2cab3794db23b4c20a60e20c83f3fe104c739007714966781c142f45f18dbb004b57ae3c8b3362cd57ec5f5f551ec91bc70a46c247b28e2f7c924498d130d89a30635ea7; Path=/
-Set-Cookie: climatedataapi_ext.cookie=2543955978.20480.0000; path=/; Httponly
-Set-Cookie: climatedataapi.cookie=299940106.33060.0000; path=/; Httponly
-Set-Cookie: TS01c35ec3=010640bd989f8946297bfc4c0a42c59ac758d1e032fe4a0b38eeb476f3c9e37f9ad60aaa75a561ea1e0064ae571a95fc8309ad133c82fc644a7931757c8636d082727ee914; Path=/
-Set-Cookie: climatedata.cookie=2093065738.64288.0000; path=/; Httponly; Secure
-Set-Cookie: AWSALBCORS=giQAXWM0rCLSM32a3PF3XRTYMyZI6pKCAGFwNPNIxFN0x5uTf4sjSqByHJ+yp1gPHbsRrerUqLf3FHV4AVi7GBEz6GwpY/NgP8EWz5av0z1ZndS5WNO43NAB86PZ; Expires=Tue, 04 Feb 2020 13:01:52 GMT; Path=/; SameSite=None; Secure
-Set-Cookie: AWSALB=giQAXWM0rCLSM32a3PF3XRTYMyZI6pKCAGFwNPNIxFN0x5uTf4sjSqByHJ+yp1gPHbsRrerUqLf3FHV4AVi7GBEz6GwpY/NgP8EWz5av0z1ZndS5WNO43NAB86PZ; Expires=Tue, 04 Feb 2020 13:01:52 GMT; Path=/
 X-XSS-Protection: 1; mode=block
 HttpOnly: true
 Content-Type: application/xml
+Date: Tue, 28 Jan 2020 14:15:55 GMT
 ```
 
 ### Response body recorded for playback (200: application/xml):

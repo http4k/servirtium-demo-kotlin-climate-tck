@@ -1,9 +1,7 @@
 package servirtium.http4k
 
-import org.http4k.core.Request
 import org.http4k.core.Uri
 import org.http4k.server.Http4kServer
-import org.http4k.servirtium.InteractionOptions
 import org.http4k.servirtium.InteractionStorage.Companion.Disk
 import org.http4k.servirtium.ServirtiumServer
 import org.junit.jupiter.api.AfterEach
@@ -20,9 +18,7 @@ class DiskPlaybackClimateApiTests : ClimateApiTests {
     fun start(info: TestInfo) {
         servirtium = ServirtiumServer.Replay(info.displayName.removeSuffix("()"),
             Disk(File("src/test/resources")),
-            object : InteractionOptions {
-                override fun modify(request: Request) = request.header("Date", "some overridden date")
-            }
+            ClimateInteractionOptions
         )
         servirtium.start()
     }

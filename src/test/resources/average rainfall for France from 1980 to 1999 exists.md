@@ -5,8 +5,9 @@
 ```
 Accept-encoding: gzip
 Connection: Keep-Alive
-Host: localhost:55346
-User-agent: okhttp/4.3.1
+Host: localhost
+User-agent: agent
+Date: Tue, 28 Jan 2020 14:15:55 GMT
 ```
 
 ### Request body recorded for playback ():
@@ -25,20 +26,15 @@ Access-Control-Allow-Methods: GET
 Connection: keep-alive
 Pragma: no-cache
 Access-Control-Allow-Headers: X-Requested-With
-Date: Tue, 28 Jan 2020 13:01:52 GMT
 X-Frame-Options: deny
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 Cache-Control: no-cache,no-store
 Secure: true
 Content-Security-Policy: default-src 'self'
-Set-Cookie: TS0137860d=017189f947e6cedd712f299956f4bd078c8849fe4d225a09b95d86712cbee6038d71b91f6c033ad95b05a67e60d9bd58a492e4b848ab5ba4e8057cc73344dcca6682743346d9f227cf5c18a51ec0a5bb992c93e3018e2ac380fb2063041770c9808f3fccb264d5f3e3002edc191e178a39210cd3ff; Path=/
-Set-Cookie: TS01c35ec3=010640bd98b2ac2b1d4626f8f706d1fc55f84aea3ff26849b830dbe769a00ea6ca249075485a60eeb02664397c92c905d506c08e15700264e4d7f0aab907888eaf9c40a435; Path=/
-Set-Cookie: climatedata.cookie=1791010314.64288.0000; path=/; Httponly; Secure
-Set-Cookie: AWSALBCORS=fzy828OxbbZ9AGbPk5uEmrdTUZflHS+7wkq7Bvffn1SVX9cw+xZO7RVKFDvBh5djM5H/2+zfg1Dc5Fkr8Ut0+JPTcZ3lmq5l8c3SQ0X/iede3u4XjzcfEXJos+9W; Expires=Tue, 04 Feb 2020 13:01:52 GMT; Path=/; SameSite=None; Secure
-Set-Cookie: AWSALB=fzy828OxbbZ9AGbPk5uEmrdTUZflHS+7wkq7Bvffn1SVX9cw+xZO7RVKFDvBh5djM5H/2+zfg1Dc5Fkr8Ut0+JPTcZ3lmq5l8c3SQ0X/iede3u4XjzcfEXJos+9W; Expires=Tue, 04 Feb 2020 13:01:52 GMT; Path=/
 X-XSS-Protection: 1; mode=block
 HttpOnly: true
 Content-Type: application/xml
+Date: Tue, 28 Jan 2020 14:15:55 GMT
 ```
 
 ### Response body recorded for playback (200: application/xml):

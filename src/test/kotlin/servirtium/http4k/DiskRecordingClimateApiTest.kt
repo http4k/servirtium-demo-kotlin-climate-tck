@@ -1,7 +1,6 @@
 package servirtium.http4k
 
 import org.http4k.core.Uri
-import org.http4k.servirtium.InteractionOptions
 import org.http4k.servirtium.InteractionStorage.Companion.Disk
 import org.http4k.servirtium.ServirtiumServer
 import org.junit.jupiter.api.AfterEach
@@ -22,8 +21,7 @@ class DiskRecordingClimateApiTest : ClimateApiTests {
             info.displayName.removeSuffix("()"),
             DEFAULT_CLIMATE_API_SITE,
             Disk(File("src/test/resources")),
-            object : InteractionOptions {
-            }
+            ClimateInteractionOptions
         )
         servirtium.start()
     }
