@@ -1,4 +1,4 @@
-package servirtium.http4k.servirtium.http4k
+package servirtium.http4k
 
 import org.http4k.core.Uri
 import org.http4k.servirtium.InteractionOptions
@@ -8,7 +8,6 @@ import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.TestInfo
 import servirtium.http4k.ClimateApi.Companion.DEFAULT_CLIMATE_API_SITE
-import servirtium.http4k.ClimateApiTests
 import java.io.File
 
 class RecordingClimateApiTest : ClimateApiTests {
