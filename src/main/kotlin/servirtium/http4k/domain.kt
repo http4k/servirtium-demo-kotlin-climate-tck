@@ -1,11 +1,11 @@
 package servirtium.http4k
 
-data class AnnualData(val doubleVal: Double = 0.0)
+data class AnnualData(val doubleVal: Double)
 
 data class AnnualGcmDatum(
-    var gcm: String? = null,
-    var variable: String? = null,
-    var fromYear: Int = 0,
-    var toYear: Int = 0,
+    var gcm: String,
+    var variable: String,
+    var fromYear: Int,
+    var toYear: Int,
     val annualData: AnnualData
 )
