@@ -1,5 +1,11 @@
-.gradle/
 .idea/
 *.iml
+.gradle/
 build/
+gradle.properties
 .DS_Store
+classes/
+/site/
+out/
+store/
+/.idea/
