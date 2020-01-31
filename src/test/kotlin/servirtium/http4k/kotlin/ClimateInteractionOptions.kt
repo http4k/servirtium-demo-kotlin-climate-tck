@@ -1,4 +1,4 @@
-package servirtium.http4k
+package servirtium.http4k.kotlin
 
 import org.http4k.core.Request
 import org.http4k.core.Response

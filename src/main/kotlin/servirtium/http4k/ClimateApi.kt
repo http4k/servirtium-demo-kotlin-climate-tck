@@ -40,6 +40,7 @@ class ClimateApi(baseUri: Uri) {
     }
 
     companion object {
+        @JvmField
         val DEFAULT_CLIMATE_API_SITE = Uri.of("http://climatedataapi.worldbank.org")
     }
 
