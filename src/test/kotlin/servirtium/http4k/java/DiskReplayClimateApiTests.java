@@ -9,6 +9,8 @@ import org.junit.jupiter.api.TestInfo;
 
 import java.io.File;
 
+import static servirtium.http4k.java.JUnitUtil.getMarkdownNameFrom;
+
 public class DiskReplayClimateApiTests implements ClimateApiTests {
 
     @Override
@@ -21,7 +23,7 @@ public class DiskReplayClimateApiTests implements ClimateApiTests {
     @BeforeEach
     public void start(TestInfo info) {
         servirtium = ServirtiumServer.Replay(
-                info.getDisplayName().substring(0, info.getDisplayName().indexOf('(')),
+                getMarkdownNameFrom(info),
                 InteractionStorage.Companion.Disk(new File("src/test/resources")),
                 new ClimateInteractionOptions(),
                 0

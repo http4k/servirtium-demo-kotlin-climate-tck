@@ -23,7 +23,7 @@ class GitHubPlaybackClimateApiTests : ClimateApiTests {
 
     @BeforeEach
     fun start(info: TestInfo) {
-        servirtium = ServirtiumServer.Replay(info.displayName.removeSuffix("()"),
+        servirtium = ServirtiumServer.Replay(info.markdownName(),
             Github("http4k", "servirtium-demo-kotlin-climate-tck",
                 Credentials("<github user>", "<personal access token>"),
                 Paths.get("src/test/resources")

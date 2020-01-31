@@ -14,6 +14,8 @@ import org.junit.jupiter.api.TestInfo;
 
 import java.nio.file.Paths;
 
+import static servirtium.http4k.java.JUnitUtil.getMarkdownNameFrom;
+
 /**
  * To run this test, remove the disabled annotation and insert a valid github user and
  * personal access token.
@@ -31,7 +33,7 @@ public class GithubReplayClimateApiTests implements ClimateApiTests {
     @BeforeEach
     public void start(TestInfo info) {
         servirtium = ServirtiumServer.Replay(
-                info.getDisplayName().substring(0, info.getDisplayName().indexOf('(')),
+                getMarkdownNameFrom(info),
                 new Github("http4k", "servirtium-demo-kotlin-climate-tck",
                         new Credentials("<github user>", "<personal access token>"),
                         Paths.get("src/test/resources"),

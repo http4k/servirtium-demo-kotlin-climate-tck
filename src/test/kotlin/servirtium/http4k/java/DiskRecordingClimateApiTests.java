@@ -10,6 +10,8 @@ import servirtium.http4k.ClimateApi;
 
 import java.io.File;
 
+import static servirtium.http4k.java.JUnitUtil.getMarkdownNameFrom;
+
 public class DiskRecordingClimateApiTests implements ClimateApiTests {
 
     @Override
@@ -22,7 +24,7 @@ public class DiskRecordingClimateApiTests implements ClimateApiTests {
     @BeforeEach
     public void start(TestInfo info) {
         servirtium = ServirtiumServer.Recording(
-                info.getDisplayName().substring(0, info.getDisplayName().indexOf('(')),
+                getMarkdownNameFrom(info),
                 ClimateApi.DEFAULT_CLIMATE_API_SITE,
                 InteractionStorage.Disk(new File("src/test/resources")),
                 new ClimateInteractionOptions(),

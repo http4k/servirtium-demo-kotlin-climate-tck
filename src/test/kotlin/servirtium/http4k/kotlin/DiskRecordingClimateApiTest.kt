@@ -18,7 +18,7 @@ class DiskRecordingClimateApiTest : ClimateApiTests {
     @BeforeEach
     fun start(info: TestInfo) {
         servirtium = ServirtiumServer.Recording(
-            info.displayName.removeSuffix("()"),
+            info.markdownName(),
             DEFAULT_CLIMATE_API_SITE,
             Disk(File("src/test/resources")),
             ClimateInteractionOptions

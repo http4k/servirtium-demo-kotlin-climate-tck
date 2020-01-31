@@ -16,7 +16,7 @@ class DiskPlaybackClimateApiTests : ClimateApiTests {
 
     @BeforeEach
     fun start(info: TestInfo) {
-        servirtium = ServirtiumServer.Replay(info.displayName.removeSuffix("()"),
+        servirtium = ServirtiumServer.Replay(info.markdownName(),
             Disk(File("src/test/resources")),
             ClimateInteractionOptions
         )
