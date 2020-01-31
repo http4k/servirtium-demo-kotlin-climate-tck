@@ -22,4 +22,4 @@ That runs the tests: direct, playback and record. TODO: more description.
 
 ## Credits:
 
-David Denton's work, implementing all of the steps of https://github.com/servirtium/README/blob/master/starting-a-new-implementation.md
+@daviddenton's work, implementing all of the steps of https://github.com/servirtium/README/blob/master/starting-a-new-implementation.md
