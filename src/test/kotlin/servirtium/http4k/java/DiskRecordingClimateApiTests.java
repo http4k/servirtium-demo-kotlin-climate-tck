@@ -7,7 +7,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.TestInfo;
 import servirtium.http4k.ClimateApi;
-import servirtium.http4k.kotlin.ClimateInteractionOptions;
 
 import java.io.File;
 
@@ -26,7 +25,7 @@ public class DiskRecordingClimateApiTests implements ClimateApiTests {
                 info.getDisplayName().substring(0, info.getDisplayName().indexOf('(')),
                 ClimateApi.DEFAULT_CLIMATE_API_SITE,
                 InteractionStorage.Disk(new File("src/test/resources")),
-                ClimateInteractionOptions.INSTANCE,
+                new ClimateInteractionOptions(),
                 0
         );
         servirtium.start();

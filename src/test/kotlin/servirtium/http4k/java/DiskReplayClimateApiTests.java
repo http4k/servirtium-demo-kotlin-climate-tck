@@ -6,7 +6,6 @@ import org.http4k.servirtium.ServirtiumServer;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.TestInfo;
-import servirtium.http4k.kotlin.ClimateInteractionOptions;
 
 import java.io.File;
 
@@ -24,7 +23,7 @@ public class DiskReplayClimateApiTests implements ClimateApiTests {
         servirtium = ServirtiumServer.Replay(
                 info.getDisplayName().substring(0, info.getDisplayName().indexOf('(')),
                 InteractionStorage.Companion.Disk(new File("src/test/resources")),
-                ClimateInteractionOptions.INSTANCE,
+                new ClimateInteractionOptions(),
                 0
         );
         servirtium.start();

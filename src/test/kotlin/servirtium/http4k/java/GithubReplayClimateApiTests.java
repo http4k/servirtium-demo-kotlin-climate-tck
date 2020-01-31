@@ -11,7 +11,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.TestInfo;
-import servirtium.http4k.kotlin.ClimateInteractionOptions;
 
 import java.nio.file.Paths;
 
@@ -38,7 +37,7 @@ public class GithubReplayClimateApiTests implements ClimateApiTests {
                         Paths.get("src/test/resources"),
                         "master",
                         Http4kKt.then(ClientFilters.SetBaseUriFrom.INSTANCE.invoke(Uri.Companion.of("https://api.github.com")), JavaHttpClient.INSTANCE.invoke())),
-                ClimateInteractionOptions.INSTANCE,
+                new ClimateInteractionOptions(),
                 0
         );
         servirtium.start();
