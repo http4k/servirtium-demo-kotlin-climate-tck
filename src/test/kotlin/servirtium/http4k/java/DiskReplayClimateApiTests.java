@@ -21,7 +21,7 @@ public class DiskReplayClimateApiTests implements ClimateApiTests {
 
     @BeforeEach
     public void start(TestInfo info) {
-        servirtium = ServirtiumServer.Companion.Replay(
+        servirtium = ServirtiumServer.Replay(
                 info.getDisplayName().substring(0, info.getDisplayName().indexOf('(')),
                 InteractionStorage.Companion.Disk(new File("src/test/resources")),
                 ClimateInteractionOptions.INSTANCE,
