@@ -8,15 +8,13 @@ import org.http4k.servirtium.InteractionStorage
 import org.http4k.servirtium.ServirtiumServer
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.TestInfo
-import java.nio.file.Path
+import java.nio.file.Paths
 
 /**
  * To run this test, remove the disabled annotation and insert a valid github user and
  * personal access token.
  */
-@Disabled
 class GitHubPlaybackClimateApiTests : ClimateApiTests {
     override val uri by lazy { Uri.of("http://localhost:${servirtium.port()}") }
 
@@ -27,7 +25,7 @@ class GitHubPlaybackClimateApiTests : ClimateApiTests {
         servirtium = ServirtiumServer.Replay(info.displayName.removeSuffix("()"),
             InteractionStorage.Github("http4k", "servirtium-demo-kotlin-climate-tck",
                 Credentials("<github user>", "<personal access token>"),
-                Path.of("src/test/resources")
+                Paths.get("src/test/resources")
             ),
             ClimateInteractionOptions
         )
