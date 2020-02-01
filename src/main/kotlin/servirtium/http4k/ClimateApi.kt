@@ -22,12 +22,16 @@ class ClimateApi(baseUri: Uri) {
 
             val xml = response.bodyString()
 
+            // non-existent country returns a simple message string (with the wrong mime
+            // type, as it happens.
             if (xml.contains("Invalid country code. Three letters are required"))
                 throw CountryISOwrong("$countryISO not recognized by climateweb")
 
             @Suppress("UNCHECKED_CAST")
             val agd = xStream.fromXML(xml) as List<AnnualGcmDatum>
 
+            // wrong date ranges just return an empty list of data - a choice of
+            // WorldBank's Climate API.
             if (agd.isEmpty()) throw BadDateRange("date range $fromCCYY-$toCCYY not supported")
 
             val sum = agd.map { it.annualData.doubleVal }.sum()

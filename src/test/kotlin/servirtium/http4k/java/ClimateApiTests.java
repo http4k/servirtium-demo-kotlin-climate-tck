@@ -22,12 +22,11 @@ public interface ClimateApiTests {
 
     @Test
     default void averageRainfallForEgyptFrom1980To1999Exists() {
-        assertEquals(54.58587712129825, ClimateApi(uri).getAveAnnualRainfall(1980, 1999, "egy"));
+        assertEquals(54.58587712129825, new ClimateApi(uri()).getAveAnnualRainfall(1980, 1999, "egy"));
     }
 
     @Test
     default void averageRainfallForGreatBritainFrom1985To1995DoesNotExist() {
-        // wrong date ranges just return an empty list of data -
         try {
             new ClimateApi(uri()).getAveAnnualRainfall(1985, 1995, "gbr");
         } catch (ClimateApi.BadDateRange e) {
@@ -38,7 +37,6 @@ public interface ClimateApiTests {
 
     @Test
     default void averageRainfallForMiddleEarthFrom1985To1995DoesNotExist() {
-        // wrong date ranges just return an empty list of data -
         try {
             new ClimateApi(uri()).getAveAnnualRainfall(1980, 1999, "mde");
         } catch (ClimateApi.BadDateRange e) {
@@ -48,7 +46,7 @@ public interface ClimateApiTests {
 
     @Test
     default void averageRainfallForGreatBritainAndFranceFrom1980To1999CanBeCalculatedFromTwoRequests() {
-        assertEquals(951.3220963726872, new ClimateApi(uri()).getAveAnnualRainfall(1980, 1999, "gbr", "fra"))
+        assertEquals(951.3220963726872, new ClimateApi(uri()).getAveAnnualRainfall(1980, 1999, "gbr", "fra"));
     }
 
 }

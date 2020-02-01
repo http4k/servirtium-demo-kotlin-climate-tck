@@ -34,7 +34,6 @@ interface ClimateApiTests {
     @Test
     @JvmDefault
     fun averageRainfallForGreatBritainFrom1985To1995DoesNotExist() {
-        // wrong date ranges just return an empty list of data -
         assertThat({ ClimateApi(uri).getAveAnnualRainfall(1985, 1995, "gbr") }, throws(
             has(BadDateRange::getLocalizedMessage, equalTo("date range 1985-1995 not supported"))
         ))
@@ -43,7 +42,6 @@ interface ClimateApiTests {
     @Test
     @JvmDefault
     fun averageRainfallForMiddleEarthFrom1985To1995DoesNotExist() {
-        // wrong date ranges just return an empty list of data -
         assertThat({ ClimateApi(uri).getAveAnnualRainfall(1980, 1999, "mde") }, throws(
             has(CountryISOwrong::getLocalizedMessage, equalTo("mde not recognized by climateweb"))
         ))
