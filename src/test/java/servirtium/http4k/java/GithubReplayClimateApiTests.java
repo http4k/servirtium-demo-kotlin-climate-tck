@@ -1,10 +1,8 @@
 package servirtium.http4k.java;
 
-import org.http4k.client.JavaHttpClient;
 import org.http4k.core.Credentials;
-import org.http4k.core.Http4kKt;
 import org.http4k.core.Uri;
-import org.http4k.filter.ClientFilters;
+import org.http4k.server.SunHttp;
 import org.http4k.servirtium.Github;
 import org.http4k.servirtium.ServirtiumServer;
 import org.junit.jupiter.api.AfterEach;
@@ -37,10 +35,8 @@ public class GithubReplayClimateApiTests implements ClimateApiTests {
                 new Github("http4k", "servirtium-demo-kotlin-climate-tck",
                         new Credentials("<github user>", "<personal access token>"),
                         Paths.get("src/test/resources"),
-                        "master",
-                        Http4kKt.then(ClientFilters.SetBaseUriFrom.INSTANCE.invoke(Uri.Companion.of("https://api.github.com")), JavaHttpClient.INSTANCE.invoke())),
-                new ClimateInteractionOptions(),
-                0
+                        "master"),
+                new ClimateInteractionOptions(), 0, SunHttp::new
         );
         servirtium.start();
     }
