@@ -39,7 +39,7 @@ public interface ClimateApiTests {
     default void averageRainfallForMiddleEarthFrom1985To1995DoesNotExist() {
         try {
             new ClimateApi(uri()).getAveAnnualRainfall(1980, 1999, "mde");
-        } catch (ClimateApi.BadDateRange e) {
+        } catch (ClimateApi.CountryISOwrong e) {
                     assertEquals("mde not recognized by climateweb", e.getLocalizedMessage());
         }
     }
