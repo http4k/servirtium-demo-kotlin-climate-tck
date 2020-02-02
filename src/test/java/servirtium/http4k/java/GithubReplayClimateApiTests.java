@@ -2,6 +2,7 @@ package servirtium.http4k.java;
 
 import org.http4k.core.Credentials;
 import org.http4k.core.Uri;
+import org.http4k.server.SunHttp;
 import org.http4k.servirtium.Github;
 import org.http4k.servirtium.ServirtiumServer;
 import org.junit.jupiter.api.AfterEach;
@@ -35,7 +36,7 @@ public class GithubReplayClimateApiTests implements ClimateApiTests {
                         new Credentials("<github user>", "<personal access token>"),
                         Paths.get("src/test/resources"),
                         "master"),
-                new ClimateInteractionOptions()
+                new ClimateInteractionOptions(), 0, SunHttp::new
         );
         servirtium.start();
     }

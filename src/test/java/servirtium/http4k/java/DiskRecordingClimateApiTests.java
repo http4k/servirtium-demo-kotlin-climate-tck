@@ -1,6 +1,7 @@
 package servirtium.http4k.java;
 
 import org.http4k.core.Uri;
+import org.http4k.server.SunHttp;
 import org.http4k.servirtium.InteractionStorage;
 import org.http4k.servirtium.ServirtiumServer;
 import org.junit.jupiter.api.AfterEach;
@@ -27,7 +28,7 @@ public class DiskRecordingClimateApiTests implements ClimateApiTests {
                 getMarkdownNameFrom(info),
                 ClimateApi.DEFAULT_CLIMATE_API_SITE,
                 InteractionStorage.Disk(new File("src/test/resources")),
-                new ClimateInteractionOptions()
+                new ClimateInteractionOptions(), 0, SunHttp::new
         );
         servirtium.start();
     }
