@@ -27,8 +27,7 @@ public class DiskRecordingClimateApiTests implements ClimateApiTests {
                 getMarkdownNameFrom(info),
                 ClimateApi.DEFAULT_CLIMATE_API_SITE,
                 InteractionStorage.Disk(new File("src/test/resources")),
-                new ClimateInteractionOptions(),
-                0
+                new ClimateInteractionOptions()
         );
         servirtium.start();
     }

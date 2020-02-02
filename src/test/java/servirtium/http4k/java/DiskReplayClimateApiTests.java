@@ -25,8 +25,7 @@ public class DiskReplayClimateApiTests implements ClimateApiTests {
         servirtium = ServirtiumServer.Replay(
                 getMarkdownNameFrom(info),
                 InteractionStorage.Companion.Disk(new File("src/test/resources")),
-                new ClimateInteractionOptions(),
-                0
+                new ClimateInteractionOptions()
         );
         servirtium.start();
     }
