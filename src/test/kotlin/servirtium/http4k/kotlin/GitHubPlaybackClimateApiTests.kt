@@ -3,7 +3,7 @@ package servirtium.http4k.kotlin
 import org.http4k.core.Credentials
 import org.http4k.core.Uri
 import org.http4k.server.Http4kServer
-import org.http4k.servirtium.Github
+import org.http4k.servirtium.GitHub
 import org.http4k.servirtium.ServirtiumServer
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
@@ -24,7 +24,7 @@ class GitHubPlaybackClimateApiTests : ClimateApiTests {
     @BeforeEach
     fun start(info: TestInfo) {
         servirtium = ServirtiumServer.Replay(info.markdownName(),
-            Github("http4k", "servirtium-demo-kotlin-climate-tck",
+            GitHub("http4k", "servirtium-demo-kotlin-climate-tck",
                 Credentials("<github user>", "<personal access token>"),
                 Paths.get("src/test/resources")
             ),

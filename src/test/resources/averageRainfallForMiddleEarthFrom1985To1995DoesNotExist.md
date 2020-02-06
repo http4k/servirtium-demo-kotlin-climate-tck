@@ -19,21 +19,21 @@ Date: Tue, 28 Jan 2020 14:15:55 GMT
 ### Response headers recorded for playback:
 
 ```
-Transfer-Encoding: chunked
-Access-Control-Allow-Origin: *
-X-Content-Type-Options: nosniff
-Access-Control-Allow-Methods: GET
-Connection: keep-alive
-Pragma: no-cache
-Access-Control-Allow-Headers: X-Requested-With
-X-Frame-Options: deny
-Strict-Transport-Security: max-age=31536000; includeSubDomains
-Cache-Control: no-cache,no-store
-Secure: true
-Content-Security-Policy: default-src 'self'
-X-XSS-Protection: 1; mode=block
-HttpOnly: true
-Content-Type: application/json
+access-control-allow-headers: X-Requested-With
+access-control-allow-methods: GET
+access-control-allow-origin: *
+cache-control: no-cache,no-store
+connection: keep-alive
+content-security-policy: default-src 'self'
+content-type: application/json
+httponly: true
+pragma: no-cache
+secure: true
+strict-transport-security: max-age=31536000; includeSubDomains
+transfer-encoding: chunked
+x-content-type-options: nosniff
+x-frame-options: deny
+x-xss-protection: 1; mode=block
 Date: Tue, 28 Jan 2020 14:15:55 GMT
 ```
 
