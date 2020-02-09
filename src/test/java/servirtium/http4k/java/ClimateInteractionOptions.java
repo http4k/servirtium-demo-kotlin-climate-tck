@@ -29,4 +29,9 @@ public class ClimateInteractionOptions implements InteractionOptions {
     public boolean isBinary(@NotNull ContentType contentType) {
         return false;
     }
+
+    @Override
+    public boolean debugTraffic() {
+        return false;
+    }
 }
