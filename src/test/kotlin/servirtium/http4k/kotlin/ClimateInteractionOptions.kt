@@ -13,6 +13,4 @@ object ClimateInteractionOptions : InteractionOptions {
     override fun modify(response: Response) = response
         .removeHeader("Set-Cookie")
         .replaceHeader("Date", "Tue, 28 Jan 2020 14:15:55 GMT")
-
-    override fun debugTraffic() = true
 }
