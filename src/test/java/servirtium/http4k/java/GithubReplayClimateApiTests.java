@@ -23,7 +23,7 @@ public class GithubReplayClimateApiTests implements ClimateApiTests {
 
     @Override
     public Uri uri() {
-        return Uri.Companion.of("http://localhost:" + servirtium.port());
+        return Uri.of("http://localhost:" + servirtium.port());
     }
 
     private ServirtiumServer servirtium;

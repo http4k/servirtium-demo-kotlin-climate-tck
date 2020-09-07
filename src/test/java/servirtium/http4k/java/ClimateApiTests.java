@@ -32,7 +32,6 @@ public interface ClimateApiTests {
         } catch (ClimateApi.BadDateRange e) {
             assertEquals("date range 1985-1995 not supported", e.getLocalizedMessage());
         }
-
     }
 
     @Test
@@ -48,5 +47,4 @@ public interface ClimateApiTests {
     default void averageRainfallForGreatBritainAndFranceFrom1980To1999CanBeCalculatedFromTwoRequests() {
         assertEquals(951.3220963726872, new ClimateApi(uri()).getAveAnnualRainfall(1980, 1999, "gbr", "fra"));
     }
-
 }
