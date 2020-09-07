@@ -1,12 +1,14 @@
 package servirtium.http4k
 
 import com.thoughtworks.xstream.XStream
+import org.http4k.client.JavaHttpClient
 import org.http4k.client.OkHttp
 import org.http4k.core.Method.GET
 import org.http4k.core.Request
 import org.http4k.core.Uri
 import org.http4k.core.then
 import org.http4k.filter.ClientFilters.SetBaseUriFrom
+import org.http4k.filter.DebuggingFilters
 
 class ClimateApi(baseUri: Uri) {
     private val xStream = XStream().apply {
@@ -14,7 +16,7 @@ class ClimateApi(baseUri: Uri) {
         aliasField("double", AnnualData::class.java, "doubleVal")
     }
 
-    private val http = SetBaseUriFrom(baseUri).then(OkHttp())
+    private val http = SetBaseUriFrom(baseUri).then(JavaHttpClient())
 
     fun getAveAnnualRainfall(fromCCYY: Int, toCCYY: Int, vararg countryISOs: String): Double {
         val total = countryISOs.map { countryISO ->

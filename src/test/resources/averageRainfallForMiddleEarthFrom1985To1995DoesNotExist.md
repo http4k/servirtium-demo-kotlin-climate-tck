@@ -3,8 +3,7 @@
 ### Request headers recorded for playback:
 
 ```
-Accept-encoding: gzip
-Connection: Keep-Alive
+Content-length: 0
 Host: localhost
 User-agent: agent
 Date: Tue, 28 Jan 2020 14:15:55 GMT
@@ -19,21 +18,25 @@ Date: Tue, 28 Jan 2020 14:15:55 GMT
 ### Response headers recorded for playback:
 
 ```
-access-control-allow-headers: X-Requested-With
-access-control-allow-methods: GET
-access-control-allow-origin: *
-cache-control: no-cache,no-store
-connection: keep-alive
-content-security-policy: default-src 'self'
-content-type: application/json
-httponly: true
-pragma: no-cache
-secure: true
-strict-transport-security: max-age=31536000; includeSubDomains
-transfer-encoding: chunked
-x-content-type-options: nosniff
-x-frame-options: deny
-x-xss-protection: 1; mode=block
+Content-Type: application/json
+Connection: keep-alive
+Strict-Transport-Security: max-age=0
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: X-Requested-With
+Access-Control-Allow-Methods: GET
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'self'
+X-Frame-Options: deny
+Cache-Control: no-cache,no-store
+Pragma: no-cache
+Secure: true
+HttpOnly: true
+Transfer-Encoding: chunked
 Date: Tue, 28 Jan 2020 14:15:55 GMT
 ```
 
