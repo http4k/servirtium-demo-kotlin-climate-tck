@@ -20,10 +20,6 @@ Date: Tue, 28 Jan 2020 14:15:55 GMT
 ```
 Content-Type: application/xml
 Connection: keep-alive
-Strict-Transport-Security: max-age=0
-X-Frame-Options: DENY
-X-Content-Type-Options: nosniff
-X-XSS-Protection: 1; mode=block
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: X-Requested-With
 Access-Control-Allow-Methods: GET
