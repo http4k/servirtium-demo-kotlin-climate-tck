@@ -21,6 +21,7 @@ public class ClimateInteractionOptions implements InteractionOptions {
     @Override
     public Response modify(@NotNull Response response) {
         return response
+                .removeHeaders("X-")
                 .removeHeader("Set-Cookie")
                 .replaceHeader("Date", "Tue, 28 Jan 2020 14:15:55 GMT");
     }

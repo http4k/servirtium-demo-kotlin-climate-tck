@@ -11,6 +11,7 @@ object ClimateInteractionOptions : InteractionOptions {
         .replaceHeader("Date", "Tue, 28 Jan 2020 14:15:55 GMT")
 
     override fun modify(response: Response) = response
+        .removeHeaders("X-")
         .removeHeader("Set-Cookie")
         .replaceHeader("Date", "Tue, 28 Jan 2020 14:15:55 GMT")
 }

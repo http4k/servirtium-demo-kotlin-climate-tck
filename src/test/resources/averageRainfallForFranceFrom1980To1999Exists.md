@@ -24,10 +24,7 @@ Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: X-Requested-With
 Access-Control-Allow-Methods: GET
 Strict-Transport-Security: max-age=31536000; includeSubDomains
-X-XSS-Protection: 1; mode=block
-X-Content-Type-Options: nosniff
 Content-Security-Policy: default-src 'self'
-X-Frame-Options: deny
 Cache-Control: no-cache,no-store
 Pragma: no-cache
 Secure: true

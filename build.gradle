@@ -3,7 +3,7 @@ version '1.0-SNAPSHOT'
 
 buildscript {
     ext.kotlin_version = '1.4.21'
-    ext.http4k_version = '3.283.1'
+    ext.http4k_version = '4.3.0.0'
     ext.junit_version = '5.7.0'
 
     repositories {
