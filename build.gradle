@@ -2,7 +2,7 @@ group 'org.http4k'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.4.21'
+    ext.kotlin_version = '1.4.32'
     ext.http4k_version = '4.3.0.0'
     ext.junit_version = '5.7.0'
 
