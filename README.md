@@ -1,3 +1,14 @@
+Note - The World Bank took down their climate WebAPI. Darn it. We now depend on a docker version of the same until we work out what to do long term. Docker build and deploy this locally - https://github.com/servirtium/worldbank-climate-recordings - see README
+
+TL;DR:
+
+```
+docker build git@github.com:servirtium/worldbank-climate-recordings.git#main -t worldbank-api
+docker run -d -p 4567:4567 worldbank-api
+```
+
+The build for this demo project needs that docker container running
+
 ## Technology
 
 The same as a Python, Java and Ruby version of a "Climate API" library demo, but for the Kotlin ecosystem demonstrating a SERVIRTIUM markdown format for service virtualization. See https://servirtium.dev
