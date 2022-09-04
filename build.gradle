@@ -2,7 +2,7 @@ group 'org.http4k'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.4.21'
+    ext.kotlin_version = '1.4.32'
     ext.http4k_version = '4.3.0.0'
     ext.junit_version = '5.7.0'
 
@@ -44,7 +44,7 @@ dependencies {
     compile "org.http4k:http4k-core:$http4k_version"
     compile "org.http4k:http4k-client-okhttp:$http4k_version"
 
-    compile "com.thoughtworks.xstream:xstream:1.4.11.1"
+    compile "com.thoughtworks.xstream:xstream:1.4.19"
 
     testCompile "org.http4k:http4k-testing-servirtium:$http4k_version"
     testCompile "org.http4k:http4k-testing-hamkrest:$http4k_version"

@@ -14,6 +14,7 @@ class ClimateApi(baseUri: Uri) {
     private val xStream = XStream().apply {
         alias("domain.web.AnnualGcmDatum", AnnualGcmDatum::class.java)
         aliasField("double", AnnualData::class.java, "doubleVal")
+        allowTypes(arrayOf(AnnualData::class.java, AnnualGcmDatum::class.java));
     }
 
     private val http = SetBaseUriFrom(baseUri).then(JavaHttpClient())
@@ -47,7 +48,7 @@ class ClimateApi(baseUri: Uri) {
 
     companion object {
         @JvmField
-        val DEFAULT_CLIMATE_API_SITE = Uri.of("http://climatedataapi.worldbank.org")
+        val DEFAULT_CLIMATE_API_SITE = Uri.of("http://worldbank-api-for-servirtium.local.gd:4567")
     }
 
     class BadDateRange(message: String?) : UnsupportedOperationException(message)
