@@ -3,8 +3,8 @@ Note - The World Bank took down their climate WebAPI. Darn it. We now depend on 
 TL;DR:
 
 ```
-docker build git@github.com:servirtium/worldbank-climate-recordings.git#main -t worldbank-api
-docker run -d -p 4567:4567 worldbank-api
+docker build git@github.com:servirtium/worldbank-climate-recordings.git#main -t worldbank-weather-api-for-servirtium-development
+docker run -d -p 4567:4567 worldbank-weather-api-for-servirtium-development
 ```
 
 The build for this demo project needs that docker container running
